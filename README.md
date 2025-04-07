@@ -14,8 +14,8 @@ This project involves:
 - Data Engineering  
 - ETL Pipeline Developer  
 - Data Modeling  
-- Data Analytics  
-
+- Data Analytics
+  
 --
 
 ## 🚀 Project Requirements
