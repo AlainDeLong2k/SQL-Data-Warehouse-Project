@@ -16,7 +16,7 @@ This project involves:
 - Data Modeling  
 - Data Analytics  
 
----
+--
 
 ## 🚀 Project Requirements
 
