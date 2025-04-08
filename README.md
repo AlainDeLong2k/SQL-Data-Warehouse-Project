@@ -145,4 +145,4 @@ This folder contains extended customer demographics, locations, and product cate
 
 ## 🛡️ License
 
-This project is licensed under the [MIT License](License). You are free to use, modify and share this project with proper attribution.
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify and share this project with proper attribution.
