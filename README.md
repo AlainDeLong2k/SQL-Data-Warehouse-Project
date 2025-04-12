@@ -5,6 +5,18 @@ This project demonstrates a comprehensive data warehouse and analytics solution,
 
 ---
 
+## 🏗️ Data Architecture
+
+The data architecture for this project follows Medallion Architecture **Bronze**, **Silver**, and **Gold** layers:
+
+![Data Architecture](docs/data_architecture.png)
+
+1. **Bronze Layer**: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
+2. **Silver Layer**: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
+3. **Gold Layer**: Houses business-ready data modeled into a star schema required for reporting and analytics.
+
+---
+
 ## 📖 Project Overview
 
 This project involves:
@@ -13,14 +25,6 @@ This project involves:
 2. **ETL Pipelines**: Extracting, transforming, and loading data from source systems into the warehouse.
 3. **Data Modeling**: Developing fact and dimension tables optimized for analytical queries.
 4. **Analytics & Reporting**: Creating SQL-based reports and dashboards for actionable insights.
-
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
-- SQL Development
-- Data Architect
-- Data Engineering  
-- ETL Pipeline Developer  
-- Data Modeling  
-- Data Analytics  
 
 ---
 
@@ -36,7 +40,7 @@ Develop a modern data warehouse using SQL Server to consolidate sales data, enab
 - **Data Quality**: Cleanse and resolve data quality issues prior to analysis.
 - **Integration**: Combine both sources into a single, user-friendly data model designed for analytical queries.
 - **Scope**: Focus on the latest dataset only; historization of data is not required.
-- **Documentation**: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
+- **Documentation**: Provide clear documentation of the data model.
 
 ---
 
@@ -52,7 +56,7 @@ These insights empower stakeholders with key business metrics, enabling strategi
 
 ---
 
-# 📊 Dataset Documentation: Sales Data Warehouse
+## 📊 Dataset Documentation: Sales Data Warehouse
 
 This dataset is organized into two main data source folders within `datasets/`:
 
@@ -61,11 +65,11 @@ This dataset is organized into two main data source folders within `datasets/`:
 
 ---
 
-## 📁 `datasets/source_crm/` – CRM Data Source
+### 📁 `datasets/source_crm/` – CRM Data Source
 
 This folder includes customer, product, and sales transaction data.
 
-### 📄 `cust_info.csv` – Customer Information
+#### 📄 `cust_info.csv` – Customer Information
 
 | Column Name        | Description |
 |--------------------|-------------|
@@ -79,7 +83,7 @@ This folder includes customer, product, and sales transaction data.
 
 ---
 
-### 📄 `prd_info.csv` – Product Information
+#### 📄 `prd_info.csv` – Product Information
 
 | Column Name       | Description |
 |-------------------|-------------|
@@ -93,13 +97,13 @@ This folder includes customer, product, and sales transaction data.
 
 ---
 
-### 📄 `sales_details.csv` – Sales Transactions
+#### 📄 `sales_details.csv` – Sales Transactions
 
 | Column Name       | Description |
 |-------------------|-------------|
 | `sls_ord_num`     | Sales order number |
-| `sls_prd_key`     | Product key (links to `prd_info.csv`) |
-| `sls_cust_id`     | Customer ID (links to `cust_info.csv`) |
+| `sls_prd_key`     | Product key |
+| `sls_cust_id`     | Customer ID |
 | `sls_order_dt`    | Date the order was placed |
 | `sls_ship_dt`     | Date the order was shipped |
 | `sls_due_dt`      | Due date for payment |
@@ -109,21 +113,21 @@ This folder includes customer, product, and sales transaction data.
 
 ---
 
-## 📁 `datasets/source_erp/` – ERP Data Source
+### 📁 `datasets/source_erp/` – ERP Data Source
 
 This folder contains extended customer demographics, locations, and product category data.
 
-### 📄 `CUST_AZ12.csv` – Customer Demographics
+#### 📄 `cust_az12.csv` – Customer Demographics
 
 | Column Name | Description |
 |-------------|-------------|
-| `CID`       | Customer ID (maps to `cst_id` from CRM) |
+| `CID`       | Customer ID|
 | `BDATE`     | Customer birthdate |
 | `GEN`       | Gender (Male/Female) |
 
 ---
 
-### 📄 `LOC_A101.csv` – Customer Location
+#### 📄 `loc_a101.csv` – Customer Location
 
 | Column Name | Description |
 |-------------|-------------|
@@ -132,7 +136,7 @@ This folder contains extended customer demographics, locations, and product cate
 
 ---
 
-### 📄 `PX_CAT_G1V2.csv` – Product Categories
+#### 📄 `px_cat_g1v2.csv` – Product Categories
 
 | Column Name | Description |
 |-------------|-------------|

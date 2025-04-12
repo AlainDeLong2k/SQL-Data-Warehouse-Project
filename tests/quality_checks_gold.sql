@@ -24,6 +24,9 @@ FROM gold.dim_customers
 GROUP BY customer_key
 HAVING COUNT(*) > 1;
 
+SELECT DISTINCT gender
+FROM gold.dim_customers;
+
 -- ====================================================================
 -- Checking 'gold.dim_products'
 -- ====================================================================
@@ -44,6 +47,11 @@ LEFT JOIN gold.dim_customers cst
 LEFT JOIN gold.dim_products prd
 	ON sls.product_key = prd.product_key
 WHERE cst.customer_key IS NULL OR prd.product_key IS NULL;
+
+
+SELECT * FROM gold.dim_customers;
+SELECT * FROM gold.dim_products;
+SELECT * FROM gold.fact_sales;
 
 
 SELECT cst_id, COUNT(*) FROM (
