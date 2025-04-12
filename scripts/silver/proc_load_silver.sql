@@ -183,7 +183,7 @@ BEGIN
 				WHEN UPPER(TRIM(gen)) IN ('F', 'FEMALE') THEN 'Female'
 				WHEN UPPER(TRIM(gen)) IN ('M', 'MALE') THEN 'Male'
 				ELSE 'n/a'
-			END AS gen -- Normalize gender values and handle unkwnown cases
+			END AS gen -- Normalize gender values and handle unknown cases
 		FROM bronze.erp_cust_az12;
 
 		-- Loading silver.erp_loc_a101
