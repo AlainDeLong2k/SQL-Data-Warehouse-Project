@@ -147,6 +147,15 @@ This folder contains extended customer demographics, locations, and product cate
 
 ---
 
+## 📈 Tableau Public Visualizations
+
+Below are interactive visualization related to the sales data on Tableau Public:
+
+- [Customer Demographics & Geographic Distribution](https://public.tableau.com/app/profile/hung.luu8550/viz/Book1_17448939395250/Dashboard1)
+- [Sales Performance: Country, Amount, & Top Figures](https://public.tableau.com/app/profile/hung.luu8550/viz/Book1_17448939395250/Dashboard2)
+
+---
+
 ## 🛡️ License
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify and share this project with proper attribution.
